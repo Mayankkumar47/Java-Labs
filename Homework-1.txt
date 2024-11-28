@@ -1,0 +1,88 @@
+Q1) Greatest among two numbers
+
+package demo;
+
+public class Operator {
+
+	public static void main(String[] args) {
+		int first = 55;                      // initialization statement
+		 int second = 79;                     // initialization statement
+		 int max;                             // declaration statement
+		 
+		 if(first < second)                   // condition 55>79--> false 
+		 {
+		   max = second;
+	       System.out.println("Greater Value : "+max);		 
+		 }
+	}
+
+}
+
+Q2) Greatest among three numbers
+
+package demo;
+
+public class Greatest {
+	
+	public static void main(String[] args) {
+		int x = 5;
+		int y = 25;
+		int z = 35;
+		 if ( x > y )
+	        {
+	            if ( x > z )
+	            {
+	                System.out.println("Largest number: " + x);
+	            }
+	            else
+	            {
+	                System.out.println("Largest number: " + z);
+	            }
+	        }
+	        else
+	        {
+	            if ( y > z )
+	            {
+	                System.out.println("Largest number: " + y);
+	            }
+	            else 
+	            {
+	                System.out.println("Largest number: " + z);
+
+	            }
+	        }
+	}
+}
+
+Q3) Greatest among four numbers
+
+package demo;
+
+public class GreatestFour {
+
+	public static void main(String[] args) {
+		
+		        // Define variables
+		        int x = 10;
+		        int y = 30;
+		        int z = 60;
+		        int w = 50;
+
+		        int greatest = x; // Assume x is the greatest initially
+
+		        // Compare with y
+		        if (y > greatest) {
+		            greatest = y;
+		        }
+		        // Compare with z
+		        if (z > greatest) {
+		            greatest = z;
+		        }
+		        // Compare with w
+		        if (w > greatest) {
+		            greatest = w;
+		        }
+
+		        System.out.println("The greatest number is: " + greatest);
+		    }
+		}
