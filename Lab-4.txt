@@ -1,0 +1,200 @@
+Q1) Create one superclass HillStations and three subclasses Manali, Mussoorie, Gulmarg. Subclasses extend the superclass and override its location() and famousFor() method. i.call the location() and famousFor() method by the Parent class’, i.e. Hillstations class. As it refers to the base class object and the base class method overrides the superclass method; the base class method is invoked at runtime. ii.call the location() and famousFor() method by the all subclass’,and print accordingly.
+
+
+package com.demo;
+
+//Superclass HillStations
+class HillStations 
+{
+ 
+ public void location()
+ {
+     System.out.println("Location: Hill Station");
+ }
+ 
+ public void famousFor() 
+ {
+     System.out.println("Famous for: Scenic views");
+ }
+}
+
+//Subclass Manali
+class Manali extends HillStations {
+
+ // Overriding the location method
+ 
+ public void location() {
+     System.out.println("Location: Himachal Pradesh.");
+ }
+
+ // Overriding the famousFor method
+ 
+ public void famousFor() {
+     System.out.println("Famous for: Beautiful landscapes.");
+ }
+}
+
+//Subclass Mussoorie
+class Mussoorie extends HillStations {
+
+ // Overriding the location method
+ 
+ public void location() {
+     System.out.println("Location: Uttarakhand");
+ }
+
+ // Overriding the famousFor method
+ 
+ public void famousFor() {
+     System.out.println("Famous for: The Queen of Hills ");
+ }
+}
+
+//Subclass Gulmarg
+class Gulmarg extends HillStations {
+
+ // Overriding the location method
+ 
+ public void location() {
+     System.out.println("Location: Jammu & Kashmir.");
+ }
+
+ // Overriding the famousFor method
+ 
+ public void famousFor() {
+     System.out.println("Famous for: Skiing");
+ }
+}
+
+//Main class 
+public class Polymorphism {
+
+ public static void main(String[] args) {
+	 
+	 // Creating object of the superclass
+     HillStations hillstation = new HillStations();
+     
+     // Creating objects of subclasses
+     
+     Manali manali = new Manali();
+     Mussoorie mussoorie = new Mussoorie();
+     Gulmarg gulmarg = new Gulmarg();
+     
+     // Calling the methods by the superclass object
+     System.out.println("\n Calling from HillStatios class");
+     hillstation.location();
+     hillstation.famousFor();
+     ;
+
+     // Calling the methods by the subclass objects
+     System.out.println("\n Calling from Manali class");
+     manali.location();
+     manali.famousFor();
+     
+     System.out.println("\n Calling from Mussoorie class");
+     mussoorie.location();
+     mussoorie.famousFor();
+     
+     System.out.println("\n Calling from Gulmarg class");
+     gulmarg.location();
+     gulmarg.famousFor();
+ }
+}
+
+
+Output-
+
+Calling from HillStatios class
+Location: Hill Station
+Famous for: Scenic views
+
+Calling from Manali class
+Location: Himachal Pradesh.
+Famous for: Beautiful landscapes.
+
+Calling from Mussoorie class
+Location: Uttarakhand
+Famous for: The Queen of Hills 
+
+Calling from Gulmarg class
+Location: Jammu & Kashmir.
+Famous for: Skiing
+
+
+Q2) Write a Java program that demonstrates method overriding by creating a superclass called Animal and two subclasses called Dog and Cat.
+● The Animal class should have a method called makeSound(), which simply prints "The animal makes a sound."
+● The Dog and Cat classes should override this method to print "TheCat/The dog meows/barks" respectively.
+● The program should allow the user to create and display objects of each class.
+
+
+package com.demo;
+
+import java.util.Scanner;
+
+//Superclass Animal
+class Animal {
+
+ public void makeSound() {
+     System.out.println("The animal makes a sound.");
+ }
+}
+
+//Subclass Dog
+class Dog extends Animal {
+
+ // Overriding the makeSound method for Dog
+ 
+ public void makeSound() {
+     System.out.println("The dog barks.");
+ }
+}
+
+//Subclass Cat
+class Cat extends Animal {
+
+ // Overriding the makeSound method for Cat
+ 
+ public void makeSound() {
+     System.out.println("The cat meows.");
+ }
+}
+
+//Main class
+public class AnimalTest {
+
+ public static void main(String[] args) {
+     
+     Scanner scanner = new Scanner(System.in);
+
+     // display menu 
+     System.out.println("Choose an animal:");
+     System.out.println("1. Dog");
+     System.out.println("2. Cat");
+     System.out.print("Enter your choice");
+     int choice = scanner.nextInt();
+
+     // Create and display the animal
+     Animal animal;
+     if (choice == 1) {
+        animal = new Dog();  
+     } else if (choice == 2) {
+         animal = new Cat();  
+     } else {
+         System.out.println("Invalid choice! Defaulting to generic Animal.");
+         animal = new Animal(); 
+     }
+     animal.makeSound();
+
+     scanner.close();
+ }
+}
+
+
+Output-
+
+Choose an animal:
+1. Dog
+2. Cat
+Enter your choice
+2
+The cat meows.
