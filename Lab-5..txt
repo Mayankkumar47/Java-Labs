@@ -151,7 +151,7 @@ The employee name cannot be empty.
 
 
 
-Q2) Create a program with a logic that throws the ArrayIndexOutOfBoundsException while accessing elements in an array
+Q2) //Create a program with a logic that throws the ArrayIndexOutOfBoundsException while accessing elements in an array
 
 
 package com.demo;
