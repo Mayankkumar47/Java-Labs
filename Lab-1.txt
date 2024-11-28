@@ -1,0 +1,120 @@
+Q1)  Write a program to check whether a number is a Strong number or not. Strong number is a special number whose sum of factorial of digits is equal to the original number. 
+For example: 145 is a strong number. Since, 1! + 4! + 5! = 145
+
+
+package com.demo;
+
+public class StrongNumber 
+{
+	
+	public static int fac(int n)
+ {
+
+		int f = 1;
+		                                 		
+		for (int i = 1; i <= n; i++) {			//get the factorial of the number
+
+			f = f * i;
+		}
+		return f;                                       // Return the factorial value
+	}
+
+	public static void main(String[] args) {
+                                                     
+		int n = 145;					//declare an int variable and initialize a number as value
+		
+		if (n < 0) {					//checking the number if it is negative or not
+
+			System.out.println(n + " is not a Strong Number (input is negative)");
+
+			return;
+		}
+       
+		int sum = 0;					//declare a variable to store the sum value
+								
+		int inputNumber = n;				//transfer the input value to a temporary variable
+
+        		while (n != 0) {			//starting the looping for calculating the result
+
+			int d = n % 10;				//extracting the digit
+			
+			sum += fac(d);				//store the sum value
+
+			n /= 10;				//removing the digit one by one
+
+		}
+       
+		if (sum == inputNumber) 		       //check condition
+		    
+			System.out.println(inputNumber + " is a strong number");
+		 else 
+			
+			System.out.println(inputNumber + " is not a strong number");
+		
+	}
+}
+
+
+Output-
+
+145 is a strong number
+
+
+Q2) Write a program to check leap year using if else. How to check whether a given year is a leap year or not.
+
+
+package com.demo;
+
+import java.util.Scanner;
+
+public class LeapYear
+ {
+	
+   public static void main(String[] args)
+{
+	   
+      int year;
+      
+      Scanner sc = new Scanner(System.in);					//taking input from user
+      
+      System.out.println("Enter an Year : ");
+      
+      year = sc.nextInt();
+      
+      if (((year % 4 == 0) && (year % 100!= 0)) || (year%400 == 0))		//divisible by 4,not by 100,or divisible by 400
+
+      {
+
+    	  System.out.println(year+ " is a leap year");
+      }
+
+      else 
+
+      {
+
+    	  System.out.println(year+ " is not a leap year");
+      }
+             
+}
+
+}
+
+Output-
+
+Enter an Year :
+ 
+2024
+
+2024 is a leap year
+
+Enter an Year : 
+
+2025
+
+2025 is not a leap year
+
+
+
+
+
+
