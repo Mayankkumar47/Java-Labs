@@ -1,1 +1,1 @@
-# Mayank-Kumar
+# Java labs
