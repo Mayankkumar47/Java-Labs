@@ -1,4 +1,4 @@
-Q1) Create one superclass HillStations and three subclasses Manali, Mussoorie, Gulmarg. Subclasses extend the superclass and override its location() and famousFor() method. i.call the location() and famousFor() method by the Parent class’, i.e. Hillstations class. As it refers to the base class object and the base class method overrides the superclass method; the base class method is invoked at runtime. ii.call the location() and famousFor() method by the all subclass’,and print accordingly.
+Q1) //Create one superclass HillStations and three subclasses Manali, Mussoorie, Gulmarg. Subclasses extend the superclass and override its location() and //famousFor() method. i.call the location() and famousFor() method by the Parent class’, i.e. Hillstations class. As it refers to the base class object and the //base class method overrides the superclass method; the base class method is invoked at runtime. ii.call the location() and famousFor() method by the all //subclass’,and print accordingly.
 
 
 package com.demo;
@@ -121,10 +121,10 @@ Location: Jammu & Kashmir.
 Famous for: Skiing
 
 
-Q2) Write a Java program that demonstrates method overriding by creating a superclass called Animal and two subclasses called Dog and Cat.
-● The Animal class should have a method called makeSound(), which simply prints "The animal makes a sound."
-● The Dog and Cat classes should override this method to print "TheCat/The dog meows/barks" respectively.
-● The program should allow the user to create and display objects of each class.
+Q2) //Write a Java program that demonstrates method overriding by creating a superclass called Animal and two subclasses called Dog and Cat.
+//● The Animal class should have a method called makeSound(), which simply prints "The animal makes a sound."
+//● The Dog and Cat classes should override this method to print "TheCat/The dog meows/barks" respectively.
+//● The program should allow the user to create and display objects of each class.
 
 
 package com.demo;
