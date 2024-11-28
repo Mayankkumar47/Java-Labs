@@ -1,4 +1,4 @@
-Q1) Greatest among two numbers
+Q1) //Greatest among two numbers
 
 package demo;
 
@@ -18,7 +18,7 @@ public class Operator {
 
 }
 
-Q2) Greatest among three numbers
+Q2) //Greatest among three numbers
 
 package demo;
 
@@ -54,7 +54,7 @@ public class Greatest {
 	}
 }
 
-Q3) Greatest among four numbers
+Q3) //Greatest among four numbers
 
 package demo;
 
