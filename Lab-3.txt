@@ -1,5 +1,5 @@
-Q1) Write a program to print whether entered year is leap or not.
- check all possibilities of leap year using decision making statements .
+Q1) //Write a program to print whether entered year is leap or not.
+ //check all possibilities of leap year using decision making statements .
 
 
 
@@ -51,10 +51,10 @@ Enter a year:
 2000 is a leap year.
 
 
-Q2) Write a program to illustrate use of inheritance as parent child relationship.
-Parent class :  User class with User details
-Child class : child class of User having salary details of user.
-Access parent class details using object of child class to print salary details of user.
+Q2) //Write a program to illustrate use of inheritance as parent child relationship.
+//Parent class :  User class with User details
+//Child class : child class of User having salary details of user.
+//Access parent class details using object of child class to print salary details of user.
 
 
 package com.demo;
