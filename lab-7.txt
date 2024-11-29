@@ -1,0 +1,80 @@
+Q1)
+// Write a Java program to append the specified element to the end of a HashSet. ( use add() method)
+
+
+package lab;
+
+import java.util.HashSet;
+
+public class AppendToHashSet {
+    public static void main(String[] args) {
+        // Create a HashSet of Strings
+        HashSet<String> set = new HashSet<>();
+
+        // Add some initial elements to the HashSet
+        set.add("Ram");
+        set.add("Shyam");
+        set.add("Riya");
+
+        // Display the HashSet before appending the new element
+        System.out.println("HashSet before adding the new element: " + set);
+
+        // Element to append (add) to the HashSet
+        String newElement = "Lella";
+
+        // Use the add() method to append the new element
+        set.add(newElement);
+
+        // Display the HashSet after adding the new element
+        System.out.println("HashSet after adding the new element: " + set);
+    }
+}
+
+
+
+Output-
+
+HashSet before adding the new element: [Shyam, Riya, Ram]
+HashSet after adding the new element: [Shyam, Lella, Riya, Ram]
+
+
+
+Q2)
+// Write a program to declare stack. Store 10 elements into it. display stack elements. Remove 4 elements from stack and display it again.
+
+
+
+import java.util.Stack;
+
+public class StackExample {
+    public static void main(String[] args) {
+        // Declare a Stack of integers
+        Stack<Integer> stack = new Stack<>();
+
+        // Push 10 elements into the stack
+        for (int i = 1; i <= 10; i++) {
+            stack.push(i);  // Adding elements 1 to 10 into the stack
+            System.out.println("Pushed: " + i);
+        }
+
+        // Display the stack after adding elements
+        System.out.println("Stack elements after pushing 10 elements: " + stack);
+
+        // Remove 4 elements from the stack
+        for (int i = 0; i < 4; i++) {
+            int removedElement = stack.pop();  // Remove the top element
+            System.out.println("Popped: " + removedElement);
+        }
+
+        // Display the stack after removing 4 elements
+        System.out.println("Stack elements after popping 4 elements: " + stack);
+    }
+}
+
+
+
+Output-
+
+Stack elements after pushing 10 elements: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Stack elements after popping 4 elements: [1, 2, 3, 4, 5, 6]
+
