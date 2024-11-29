@@ -1,0 +1,135 @@
+Q1) 
+
+// Create a Book class with bookId, bookName and authorName.Create parameterized constructor to initialize the object.
+// Create an ArrayList of type Book and store all book objects into collections and display all book detail
+
+
+
+package com.demo;
+
+import java.util.ArrayList;
+
+//Book class with bookId, bookName, and authorName
+class Book {
+	int bookId;
+	String bookName;
+	String authorName;
+
+ // Parameterized constructor to initialize the object
+ public Book(int bookId, String bookName, String authorName) {
+     this.bookId = bookId;
+     this.bookName = bookName;
+     this.authorName = authorName;
+ }
+
+ // Getter methods for each field
+ public int getBookId() {
+     return bookId;
+ }
+
+ public String getBookName() {
+     return bookName;
+ }
+
+ public String getAuthorName() {
+     return authorName;
+ }
+
+ // Method to display book details
+ public void displayBookDetails() {
+     System.out.println("Book ID: " + bookId);
+     System.out.println("Book Name: " + bookName);
+     System.out.println("Author Name: " + authorName);
+ }
+}
+
+public class BookCollectionArrayList {
+ public static void main(String[] args) 
+ {
+     // Create an ArrayList of type Book
+     ArrayList<Book> bookList = new ArrayList<>();
+
+     // Create and add book objects to the ArrayList
+     bookList.add(new Book(1, "Dune", "Frank Herbert\n"));
+     bookList.add(new Book(2, "The Left Hand of Darkness", "Ursula K. Le Guin\n"));
+     bookList.add(new Book(3, "A Song of Ice and Fire", "George R.R. Martin\n"));
+     bookList.add(new Book(4, "he Name of the Wind", "Patrick Rothfuss\n"));
+
+     // Display all book details
+     System.out.println("List of Books:\n");
+     for (Book book : bookList) {
+         book.displayBookDetails();
+     }
+ }
+}
+
+
+Output-
+
+
+List of Books:
+
+Book ID: 1
+Book Name: Dune
+Author Name: Frank Herbert
+
+Book ID: 2
+Book Name: The Left Hand of Darkness
+Author Name: Ursula K. Le Guin
+
+Book ID: 3
+Book Name: A Song of Ice and Fire
+Author Name: George R.R. Martin
+
+Book ID: 4
+Book Name: he Name of the Wind
+Author Name: Patrick Rothfuss
+
+
+
+
+
+Q2)
+
+// Create ArrayList with few even and odd members in it. Write a Java program that calculates the sum of all even numbers present in an ArrayList of integers. 
+
+
+
+package com.demo;
+
+import java.util.ArrayList;
+
+public class SumEvenNumbers {
+    public static void main(String[] args) {
+    	
+        // Create an ArrayList with even and odd numbers
+        ArrayList<Integer> numbersList = new ArrayList<>();
+        numbersList.add(10);  
+        numbersList.add(11);  
+        numbersList.add(22);  
+        numbersList.add(33);  
+        numbersList.add(44);  
+        numbersList.add(55);  
+        numbersList.add(66);  
+
+        // Calculate the sum of even numbers
+        int sum = 0;
+        for (int number : numbersList) {
+            // Check if the number is even
+            if (number % 2 == 0) {
+                sum += number;
+            }
+        }
+
+        // Display the sum of even numbers
+        System.out.println("The sum of all even numbers is: " + sum);
+    }
+}
+
+
+
+Output-
+
+The sum of all even numbers is: 142
+
+
