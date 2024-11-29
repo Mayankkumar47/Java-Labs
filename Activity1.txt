@@ -1,0 +1,75 @@
+package com.demo;
+
+import java.util.NavigableMap;
+import java.util.SortedMap;
+import java.util.TreeMap;
+
+public class TreeMapDemo
+{
+
+	public static void main(String[] args)
+	{
+TreeMap<Integer,String> tree  = new TreeMap<>();        //  Creating object of TreeMap 
+
+tree.put(1, "Java");
+tree.put(2, "Python");
+tree.put(5, "Script");
+tree.put(6,"c sharp");
+	
+System.out.println("Tree Map member : "+ tree);
+
+tree.remove(5);
+
+System.out.println("Tree Map member after removal: "+ tree);
+
+System.out.println("First Key : "+ tree.firstKey());
+System.out.println("Last Key : "+ tree.lastKey());
+
+SortedMap<Integer,String> sm = new TreeMap<>();
+
+sm.put(1,"Java");
+sm.put(2,"Python");
+sm.put(3,"Script");
+sm.put(4,"c sharp");
+
+System.out.println("Sorted Map member : "+ sm);
+
+
+NavigableMap<Integer,String> nm = new TreeMap<>();
+
+nm.put(1,"Java");
+nm.put(2,"Python");
+nm.put(3,"Script");
+nm.put(4,"c sharp");
+
+System.out.println("Navigable Map member : "+ nm);
+
+NavigableMap<Integer,String> nm1 = new TreeMap<>();
+
+nm1.put(9,"Java");
+nm1.put(3,"Python");
+nm1.put(11,"Script");
+nm1.put(4,"c sharp");
+
+System.out.println("Navigable Map member : "+ nm1);
+	}
+}
+
+
+
+
+Output-
+
+Tree Map member : {1=Java, 2=Python, 5=Script, 6=c sharp}
+Tree Map member after removal: {1=Java, 2=Python, 6=c sharp}
+First Key : 1
+Last Key : 6
+Sorted Map member : {1=Java, 2=Python, 3=Script, 4=c sharp}
+Navigable Map member : {1=Java, 2=Python, 3=Script, 4=c sharp}
+Navigable Map member : {3=Python, 4=c sharp, 9=Java, 11=Script}
+
+
+
+
+
+
