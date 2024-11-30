@@ -1,0 +1,124 @@
+Q1) 
+// Write a Java program to associate the specified value with the specified key in a HashMap. Declare HashMap add 10 values as user input.
+
+
+
+package lab;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class HashMapDemo {
+    public static void main(String[] args) {
+        // Create a HashMap 
+        HashMap<Integer, String> map = new HashMap<>();
+        
+        // taking user input
+        Scanner scanner = new Scanner(System.in);
+
+        for (int count = 0; count < 10; )
+        {
+            System.out.print("Enter key (integer) for entry " + (count + 1) + ": ");
+            
+            while (!scanner.hasNextInt()) 
+            {
+                System.out.println("Invalid input! Please enter an integer key.");
+                
+                scanner.next(); 
+                
+                System.out.print("Enter key (integer) for entry " + (count + 1) + ": ");
+            }
+            
+            int key = scanner.nextInt(); 
+  
+            scanner.nextLine();  
+
+            System.out.print("Enter value for key '" + key + "': ");
+            
+            String value = scanner.nextLine();  
+
+            map.put(key, value);
+            
+            count++; 
+        }
+
+        // Display the contents of the HashMap 
+        System.out.println("\nContents of the HashMap: {");
+        
+        map.forEach((key, value) -> System.out.print(key + "=" + value + ", "));
+        
+        scanner.close();
+    }
+}
+
+
+Output-
+
+Enter key (integer) for entry 1: 101
+Enter value for key '101': John
+Enter key (integer) for entry 2: 102
+Enter value for key '102': Ram
+Enter key (integer) for entry 3: 103
+Enter value for key '103': Shyam
+Enter key (integer) for entry 4: 104
+Enter value for key '104': Riya
+Enter key (integer) for entry 5: 105
+Enter value for key '105': Eve
+Enter key (integer) for entry 6: 106
+Enter value for key '106': Om
+Enter key (integer) for entry 7: 107
+Enter value for key '107': Priya
+Enter key (integer) for entry 8: 108
+Enter value for key '108': Leela
+Enter key (integer) for entry 9: 109
+Enter value for key '109': Rajat
+Enter key (integer) for entry 10: 110
+Enter value for key '110': Naman
+
+Contents of the HashMap: {101=John, 102=Ram, 103=Shyam, 104=Riya, 105=Eve, 106=Om, 107=Priya, 108=Leela, 109=Rajat, 110=Naman}
+
+
+Q2) // Write a Java program to check whether a HashMap contains key-value mappings (empty) or not.
+
+
+
+package lab;
+
+import java.util.HashMap;
+
+public class HashMapEmpty {
+    public static void main(String[] args) {
+        // Create a HashMap
+        HashMap<Integer, String> map = new HashMap<>();
+        
+        // Check if the HashMap is empty initially
+        if (map.isEmpty())
+        {
+            System.out.println("The HashMap is empty.");
+        } 
+        else
+        {
+            System.out.println("The HashMap contains key-value mappings.");
+        }
+
+        // Adding some key-value pairs to the HashMap
+        map.put(1,"One Piece");
+        map.put(2,"Naroto");
+        map.put(3,"Demon Slayer");
+        
+        // Check if the HashMap is empty after adding elements
+        if (map.isEmpty())
+	 {
+            System.out.println("The HashMap is empty.");
+        }
+	else
+	 {
+            System.out.println("The HashMap contains key-value mappings.");
+        }
+    }
+}
+
+
+Output-
+The HashMap is empty.
+The HashMap contains key-value mappings.
