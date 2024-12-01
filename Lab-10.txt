@@ -1,0 +1,92 @@
+Q1)
+// Write a program to prints numbers from 0 to 4 using thread
+
+
+package lab;
+
+class Demo extends Thread {
+    @Override
+    public void run() {
+        // Loop to print numbers from 0 to 4
+        for (int i = 0; i < 5; i++) {
+            System.out.println(i);
+            try {
+                // Sleep for 600 milliseconds to make it more readable
+                Thread.sleep(600);
+            }
+	    catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+public class ThreadDemo {
+    public static void main(String[] args) {
+        // Create an instance of the Demo class
+        Demo DemoTask = new Demo();
+        
+        // Create a Thread and pass the Demo object to it
+        Thread thread = new Thread(DemoTask);
+        
+        // Start the thread
+        thread.start();
+    }
+}
+
+
+
+Output-
+0
+1
+2
+3
+4
+
+
+Q2)
+// Write a program to prints 1 to 10 and sleep for 1000ms using thread
+
+
+package lab;
+
+class Test extends Thread {
+    @Override
+    public void run() {
+        // Loop to print numbers from 1 to 10
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(i);
+
+            try {
+                // Sleep for 1000 milliseconds (1 second)
+                Thread.sleep(1000);
+            } 
+	    catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+public class ThreadDemo2 {
+    public static void main(String[] args) {
+       
+        Test Demo= new Test();
+        
+        // Start the thread
+        Demo.start();
+    }
+}
+
+Output-
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
